@@ -33,3 +33,6 @@ deciding_factor = input("Hi " + str(student_name) + ", what would you say is the
 
 while deciding_factor != 'social class' and deciding_factor != 'entry standards' and deciding_factor != 'social scene':
   deciding_factor = input("Whoops, it looks like you didn't choose 'social class' or ''. Try selecting one again! ")
+
+if choice == 'social scene':
+    
