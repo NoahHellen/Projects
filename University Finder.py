@@ -29,8 +29,8 @@ low_social_scene_list = []
 medium_social_scene_list = []
 high_social_scene_list = []
 for i in university_list:
-    if i.social_scene == 'low':
-        low_social_scene_list.append(i.social_scene)
+    if i.social_scene == 'Low':
+        low_social_scene_list.append(i)
 
 print(low_social_scene_list)
 
@@ -46,3 +46,12 @@ deciding_factor = input("Hi " + str(student_name) + ", what would you say is the
 
 while deciding_factor != 'social class' and deciding_factor != 'entry standards' and deciding_factor != 'social scene':
   deciding_factor = input("Whoops, it looks like you didn't choose 'social class' or ''. Try selecting one again! ")
+
+if deciding_factor == 'social scene':
+    social_scene_factor = input("Ok, sounds good. Type either 'low', 'medium' or 'high' for the type of social scene you want ")
+    if social_scene_factor == 'high'
+        print("Ok, you have the options of ")
+    elif social_scene_factor == 'medium'
+        print("Ok, you have the options of ")
+    elif social_scene_factor == 'low'
+        print("Ok, you have the option of {universities}".format(universities = ))
