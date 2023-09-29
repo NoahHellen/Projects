@@ -23,6 +23,19 @@ Durham = University("Durham", 22000, "Upper", "High", "Medium")
 Loughborough = University("Loughborough", 20000, "Lower", "High", "Medium")
 Leeds = University("Leeds", 37000, "Lower", "Low", "High")
 
+university_list = [Cambridge, Durham, Loughborough, Leeds]
+
+low_social_scene_list = []
+medium_social_scene_list = []
+high_social_scene_list = []
+for i in university_list:
+    if i.social_scene == 'low':
+        low_social_scene_list.append(i.social_scene)
+
+print(low_social_scene_list)
+
+
+
 Maths = Subject("AAA", "A*A*A")
 Chemisty = Subject('AAB', 'A*AA')
 Psychology = Subject('ABB', 'AAA')
@@ -33,6 +46,3 @@ deciding_factor = input("Hi " + str(student_name) + ", what would you say is the
 
 while deciding_factor != 'social class' and deciding_factor != 'entry standards' and deciding_factor != 'social scene':
   deciding_factor = input("Whoops, it looks like you didn't choose 'social class' or ''. Try selecting one again! ")
-
-if choice == 'social scene':
-    
