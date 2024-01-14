@@ -1,10 +1,10 @@
 import numpy as np
 features = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 labels = np.array([0, 0, 0, 1])
-w = [0.9, 0.9]
+w = [10, 10]
 threshold = 0.5
 learning_rate = 0.1
-epoch = 20
+epoch = 160
 for j in range(0, epoch):
     print("epoch ", j)
     global_delta = 0
@@ -20,12 +20,12 @@ for j in range(0, epoch):
         if sum_unit > threshold:
             fire = 1
         else:
-            fire = 0
+            fire = -1
         
         delta = actual - fire
         global_delta = global_delta + abs(delta)
 
-        print("preiction:", fire, " whereas actual was ", actual," (error:", delta,")")
+        print("prediction:", fire, " whereas actual was ", actual," (error:", delta,")")
 
         w[0] = w[0] + delta * learning_rate
         w[1] = w[1] + delta * learning_rate
