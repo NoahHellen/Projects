@@ -1,10 +1,10 @@
 import numpy as np
 features = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 labels = np.array([0, 0, 0, 1])
-w = [0.5, 0.5]
-threshold = 0.5
-learning_rate = 0.1
-epoch = 20
+w = [0.1, 0.1]
+bias = 0.3
+learning_rate = 0.3
+epoch = 5
 for j in range(0, epoch):
     print("epoch ", j)
     global_delta = 0
@@ -15,12 +15,12 @@ for j in range(0, epoch):
         x0 = instance[0]
         x1 = instance[1]
 
-        sum_unit = x0 * w[0] + x1 * w[1] + threshold
+        sum_unit = x0 * w[0] + x1 * w[1] - bias
 
         if sum_unit > 0:
             fire = 1
         else:
-            fire = -1
+            fire = 0
         
         delta = actual - fire
         global_delta = global_delta + abs(delta)
