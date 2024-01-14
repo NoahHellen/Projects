@@ -2,8 +2,8 @@ import numpy as np
 
 features = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 labels = np.array([0, 0, 0, 1])
-w = np.array([0.1, 0.1])  # Use NumPy array for weights
-bias = 10
+w = np.array([0, 0])  # Use NumPy array for weights
+bias = 0
 learning_rate = 0.3
 epoch = 100
 
@@ -29,8 +29,8 @@ for j in range(epoch):
 
         print("prediction:", fire, " whereas actual was ", actual, " (error:", delta, ")")
 
-        w += delta * learning_rate * instance  # Update weights
-        bias += delta * learning_rate  # Update bias
+        w = w + delta * learning_rate * instance  # Update weights
+        bias = bias + delta * learning_rate  # Update bias
 
     print("------------------")
     print("Weights:", w)
