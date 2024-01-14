@@ -1,10 +1,10 @@
 import numpy as np
 features = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 labels = np.array([0, 0, 0, 1])
-w = [0, 0]
+w = [0, 5]
 bias = 0
 learning_rate = 0.3
-epoch = 10
+epoch = 30
 for j in range(0, epoch):
     print("epoch ", j)
     global_delta = 0
